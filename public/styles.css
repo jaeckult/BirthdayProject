@@ -1,0 +1,173 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Modern, playful font */
+    margin: 0; /* Remove default margin for full-page control */
+    padding: 20px; /* Consistent padding */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient for birthday vibe */
+    color: #333; /* Darker text for readability */
+  }
+  
+  /* Profile list - Grid layout */
+  #profile-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Slightly wider cards */
+    gap: 25px; /* More breathing room */
+    max-width: 1200px; /* Constrain width for large screens */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  /* Individual profile cards */
+  .profile {
+    border: none; /* Remove border for a cleaner look */
+    padding: 15px;
+    text-align: center;
+    background: #fff; /* White card background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover animation */
+  }
+  
+  .profile:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  }
+  
+  .profile img {
+    max-width: 120px; /* Slightly larger profile pics */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 10px; /* Space below image */
+  }
+  
+  .profile h3 {
+    margin: 5px 0; /* Tighten spacing */
+    font-size: 1.2em; /* Larger name */
+    color: #2c3e50; /* Darker blue-gray for contrast */
+  }
+  
+  /* Card collection and available cards - Grid layout */
+  #card-collection, #available-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Adjust for smaller cards */
+    gap: 15px; /* Consistent spacing */
+    margin-top: 20px; /* Space above */
+  }
+  
+  /* Individual cards */
+  .card {
+    border: 2px solid #e0e0e0; /* Light border */
+    padding: 12px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s; /* Animation for interaction */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slight grow effect */
+    border-color: #3498db; /* Blue border on hover */
+  }
+  
+  .card img {
+    max-width: 60px; /* Slightly larger card images */
+    margin-bottom: 8px;
+  }
+  
+  .card h4 {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #2980b9; /* Bright blue for card titles */
+  }
+  
+  .card p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #7f8c8d; /* Gray for values */
+  }
+  
+  /* Question list */
+  #question-list .question {
+    margin: 15px 0;
+    padding: 10px;
+    background: #ecf0f1; /* Light gray background */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  #question-list .question:hover {
+    background: #dfe6e9; /* Slightly darker on hover */
+  }
+  
+  /* Profile details section */
+  #profile-details {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #profile-details img {
+    max-width: 180px; /* Larger profile pic */
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  #profile-details h2 {
+    color: #e74c3c; /* Red for name (birthday pop!) */
+    margin: 0 0 10px;
+  }
+  
+  #profile-details p {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+  
+  /* Forms (answer, unlock, gift) */
+  #answer-form, #unlock-form, #gift-form {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  #answer-form input, #gift-form select {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 18px); /* Full width minus padding/border */
+  }
+  
+  #answer-form button, #gift-form button {
+    padding: 10px 20px;
+    background: #e67e22; /* Orange for buttons (festive!) */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  #answer-form button:hover, #gift-form button:hover {
+    background: #d35400; /* Darker orange on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    #profile-list {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .profile img {
+      max-width: 80px;
+    }
+    #card-collection, #available-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #profile-details img {
+      max-width: 120px;
+    }
+  }

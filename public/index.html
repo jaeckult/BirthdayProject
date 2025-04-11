@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Gifting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Card Gifting Site</h1>
+  <div id="profile-list"></div>
+  <div id="profile-details" style="display:none;">
+    <h2 id="profile-name"></h2>
+    <img id="profile-pic" src="" alt="Profile Picture">
+    <p id="profile-bio"></p>
+    <p>Points: <span id="profile-points"></span></p>
+    <h3>Card Collection</h3>
+    <div id="card-collection"></div>
+    <h3>Questions</h3>
+    <div id="question-list"></div>
+    <div id="answer-form" style="display:none;">
+      <p id="current-question"></p>
+      <input id="answer-input" placeholder="Your answer">
+      <button onclick="submitAnswer()">Submit</button>
+    </div>
+  </div>
+  <div id="unlock-form" style="display:none;">
+    <h3>Unlock a Card</h3>
+    <div id="available-cards"></div>
+  </div>
+  <div id="gift-form" style="display:none;">
+    <h3>Gift a Card</h3>
+    <select id="gift-card"></select>
+    <select id="recipient"></select>
+    <button onclick="sendGift()">Gift</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
