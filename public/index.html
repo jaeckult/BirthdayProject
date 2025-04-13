@@ -1,31 +1,58 @@
+<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Card Gifting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Card Gifting Site</h1>
-  <div id="profile-list"></div>
+  <div id="user-display" class="user-display"></div>
+  <div id="login-form">
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <input id="name" placeholder="Profile Name" style="display:none;">
+    <input id="birthdate" type="date" style="display:none;">
+    <input id="profile_pic" type="file" accept="image/*" style="display:none;">
+    <div id="signup-questions" style="display:none;">
+      <h3>Tell us about yourself (5 questions)</h3>
+      <input class="question" placeholder="Question 1">
+      <input class="answer" placeholder="Answer 1">
+      <input class="question" placeholder="Question 2">
+      <input class="answer" placeholder="Answer 2">
+      <input class="question" placeholder="Question 3">
+      <input class="answer" placeholder="Answer 3">
+      <input class="question" placeholder="Question 4">
+      <input class="answer" placeholder="Answer 4">
+      <input class="question" placeholder="Question 5">
+      <input class="answer" placeholder="Answer 5">
+    </div>
+    <button id="login-btn" onclick="login()">Login</button>
+    <button id="signup-btn">Sign Up</button>
+    <button id="submit-signup-btn" onclick="signup()" style="display:none;">Submit Signup</button>
+    <button id="back-to-login" style="display:none;">Back to Login</button>
+    <button id="logout-btn" onclick="logout()" style="display:none;">Logout</button>
+  </div>
+  <div id="main-content" style="display: none;">
+    <div id="profile-list"></div>
+    <div id="unlock-form">
+      <h3>Available Cards</h3>
+      <div id="available-cards"></div>
+    </div>
+  </div>
   <div id="profile-details" style="display:none;">
     <h2 id="profile-name"></h2>
     <img id="profile-pic" src="" alt="Profile Picture">
+    <p id="profile-birthdate"></p>
     <p id="profile-bio"></p>
     <p>Points: <span id="profile-points"></span></p>
     <h3>Card Collection</h3>
     <div id="card-collection"></div>
     <h3>Questions</h3>
     <div id="question-list"></div>
-    <div id="answer-form" style="display:none;">
-      <p id="current-question"></p>
-      <input id="answer-input" placeholder="Your answer">
-      <button onclick="submitAnswer()">Submit</button>
-    </div>
-  </div>
-  <div id="unlock-form" style="display:none;">
-    <h3>Unlock a Card</h3>
-    <div id="available-cards"></div>
+    <div id="answer-form"></div>
   </div>
   <div id="gift-form" style="display:none;">
     <h3>Gift a Card</h3>
